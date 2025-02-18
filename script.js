@@ -9,3 +9,13 @@ E così via...
 Per fare questo bonus potremmo aver bisogno di del metodo string.includes()*/
 
 
+const lamp = document.getElementById('bulb')
+const lampBtn = document.getElementById('button')
+
+function turnOn() {
+
+    lamp.src = './assets/img/yellow_lamp.png'
+    console.log('lampada accesa')
+}
+
+lampBtn.addEventListener('click', turnOn);
