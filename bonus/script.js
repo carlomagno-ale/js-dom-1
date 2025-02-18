@@ -16,16 +16,16 @@ const offLamp = 'white_lamp.png';
 function turnOn() {
 
     if (lamp.src.includes(offLamp)) {
-
         lamp.src = '../bonus/assets/img/yellow_lamp.png'
         console.log('lampada accesa')
         console.log(lamp.src)
+        lampBtn.innerText = 'Spegni';
 
     } else {
-        
         lamp.src = '../bonus/assets/img/white_lamp.png'
         console.log('lampada spenta')
         console.log(lamp.src)
+        lampBtn.innerText = 'Accendi';
     }
 }
 
