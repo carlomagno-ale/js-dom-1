@@ -8,25 +8,25 @@ Al secondo click la lampadina si spegne e nel bottone compare la scritta "Accend
 E così via...
 Per fare questo bonus potremmo aver bisogno di del metodo string.includes()*/
 
-
 const lamp = document.getElementById('bulb')
 const lampBtn = document.getElementById('button')
 
+const offLamp = 'white_lamp.png';
+
 function turnOn() {
 
-console.log(lamp.src)
-
-    if (lamp.src === '../bonus/assets/img/white_lamp.png') {
+    if (lamp.src.includes(offLamp)) {
 
         lamp.src = '../bonus/assets/img/yellow_lamp.png'
         console.log('lampada accesa')
+        console.log(lamp.src)
 
     } else {
         
         lamp.src = '../bonus/assets/img/white_lamp.png'
         console.log('lampada spenta')
+        console.log(lamp.src)
     }
-
 }
 
 lampBtn.addEventListener('click', turnOn);
